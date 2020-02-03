@@ -9,9 +9,10 @@ class DNASequence_Info : public DNASequence {
 
 
 public:
-    DNASequence_Info(std::string sequence,size_t id, std::string name);
 
-    size_t getId() const {
+    DNASequence_Info(DNASequence *dnaSequence, std::string name);
+
+     size_t getId() const {
         return m_id;
     }
 
@@ -28,9 +29,9 @@ public:
     }
 
 private:
-    size_t m_id;
+    static size_t m_id;
     std::string m_name;
-
+    DNASequence *m_dna_sequence;
 
 
 };

@@ -1,6 +1,8 @@
 #include <iostream>
-
+#include "cli_interface.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    CLI_Interface c;
+
+    c.run_DNA_Analyzer();
     return 0;
 }

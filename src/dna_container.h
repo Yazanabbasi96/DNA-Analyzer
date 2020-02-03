@@ -6,7 +6,20 @@
 
 class DNA_container {
 public:
+
+    static DNA_container &getInstance() {
+        static DNA_container instance;
+        return instance;
+    }
+
     std::vector<DNASequence_Info> m_sequences_container;
+private:
+    DNA_container() {}
+
+
+    DNA_container(DNA_container const &);
+
+    void operator=(DNA_container const &);
 };
 
 

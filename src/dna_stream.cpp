@@ -13,7 +13,7 @@ std::string DNA_Stream::load(const char *file_name) {
 
 void DNA_Stream::save(const char *file_name, std::string dna_data) {
     std::ofstream outfile;
-    outfile.open(file_name);
+    outfile.open(file_name, std::ios::out);
     outfile << dna_data << '\n';
     outfile.close();
 }

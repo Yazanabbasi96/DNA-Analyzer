@@ -15,9 +15,11 @@ public :
 
 class DNASequence {
 public:
-    DNASequence(const char *nucleotides);
 
-    DNASequence(const std::string &nucleotides);
+
+    explicit DNASequence(const char *nucleotides);
+
+    explicit DNASequence(const std::string &nucleotides);
 
     DNASequence(const DNASequence &dna_seq);
 

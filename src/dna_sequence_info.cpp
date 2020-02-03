@@ -1,5 +1,11 @@
 
 #include "dna_sequence_info.h"
 
-DNASequence_Info::DNASequence_Info(std::string sequence, size_t id, std::string name) : DNASequence(sequence), m_id(id),
-                                                                                        m_name(name) {}
+size_t DNASequence_Info::m_id = 0;
+
+
+DNASequence_Info::DNASequence_Info(DNASequence *dnaSequence,std::string name):DNASequence(*dnaSequence) {
+    m_dna_sequence = dnaSequence;
+    m_name = name;
+    m_id++;
+}

@@ -6,6 +6,8 @@
 class DNA_Stream {
 
 public:
+    DNA_Stream() {}
+
     std::string load(const char *file_name);
 
     void save(const char *file_name, std::string dna_data);
