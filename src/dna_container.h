@@ -2,6 +2,7 @@
 #define DNA_ANALYZER_DNA_CONTAINER_H
 
 #include <vector>
+#include <map>
 #include "dna_sequence_info.h"
 
 class DNA_container {
@@ -12,10 +13,12 @@ public:
         return instance;
     }
 
-    std::vector<DNASequence_Info> m_sequences_container;
-private:
-    DNA_container() {}
+    std::map<std::string, DNASequence_Info *> dna_name_map;
+    std::map<size_t, DNASequence_Info *> dna_id_map;
 
+private:
+
+    DNA_container() {}
 
     DNA_container(DNA_container const &);
 

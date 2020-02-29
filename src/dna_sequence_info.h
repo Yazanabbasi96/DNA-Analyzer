@@ -3,18 +3,20 @@
 #define DNA_ANALYZER_DNA_SEQUENCE_INFO_H
 
 
-#include "dna_sequence.h"
+#include <string>
+#include "dna.h"
 
-class DNASequence_Info : public DNASequence {
+
+class DNASequence_Info : public DNA {
 
 
 public:
 
-    DNASequence_Info(DNASequence *dnaSequence, std::string name);
+    DNASequence_Info(DNA *dna, std::string name);
 
      size_t getId() const {
         return m_id;
-    }
+     }
 
     void setId(size_t mId) {
         m_id = mId;
@@ -28,11 +30,11 @@ public:
         m_name = mName;
     }
 
+    DNA *m_dna;
+
 private:
     static size_t m_id;
     std::string m_name;
-    DNASequence *m_dna_sequence;
-
 
 };
 

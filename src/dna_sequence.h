@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "dna.h"
 
 
 class bad_index : public std::exception {
@@ -13,7 +14,7 @@ public :
 };
 
 
-class DNASequence {
+class DNASequence :public DNA{
 public:
 
 
@@ -44,6 +45,8 @@ public:
     }
 
     ~DNASequence();
+
+
 
 private:
     char *m_nucleotides;

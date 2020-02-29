@@ -15,20 +15,20 @@ void check_nucleotides(const char *nucleotides) {
 }
 
 
-DNASequence::DNASequence(const char *nucleotides) {
+DNASequence::DNASequence(const char *nucleotides):DNA() {
     this->m_nucleotides = new char[strlen(nucleotides) + 1];
     check_nucleotides(nucleotides);
     strcpy(this->m_nucleotides, nucleotides);
 }
 
-DNASequence::DNASequence(const std::string &nucleotides) {
+DNASequence::DNASequence(const std::string &nucleotides):DNA() {
     const char *c_nucleotides = nucleotides.c_str();
     check_nucleotides(c_nucleotides);
     this->m_nucleotides = new char[nucleotides.length() + 1];
     strcpy(this->m_nucleotides, c_nucleotides);
 }
 
-DNASequence::DNASequence(const DNASequence &dna_seq) {
+DNASequence::DNASequence(const DNASequence &dna_seq):DNA() {
     this->m_nucleotides = new char[strlen(dna_seq.m_nucleotides) + 1];
     strcpy(this->m_nucleotides, dna_seq.getNucleotides());
 }
@@ -73,8 +73,7 @@ char &DNASequence::operator[](size_t index) {
     }
 }
 
-
-
 DNASequence::~DNASequence() {
     delete[] m_nucleotides;
 }
+
