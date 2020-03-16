@@ -9,7 +9,7 @@
 class DNASequence_Creator : public Command {
 
 public:
-    DNASequence_Creator() {}
+    DNASequence_Creator(){};
 
     void arguments_parser(std::vector<std::string> args);
 

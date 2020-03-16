@@ -5,13 +5,14 @@
 #include "dna_container.h"
 
 #include "commandfactory.h"
+#include "dna_sequence_creater.h"
 
 void CLI_Interface::run_DNA_Analyzer() {
     Command_Parser cmd;
     std::vector<std::string> command_container;
     CommandFactory cmdFactory;
     DNA_container &container = DNA_container::getInstance();
-
+    cmdFactory.CommandFactory_init();
 
     while (1) {
         std::string command_line;
@@ -22,11 +23,8 @@ void CLI_Interface::run_DNA_Analyzer() {
         if (command_container[0] == "quit") {
             break;
         }
-
-
         Command *command = cmdFactory.commandFactory[command_container[0]];
         command->arguments_parser(command_container);
-
     }
 
 }

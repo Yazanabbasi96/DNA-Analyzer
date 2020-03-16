@@ -16,3 +16,7 @@ void CommandFactory::CommandFactory_init() {
     commandFactory["reenum"] = new DNASequence_Creator();
     commandFactory["save"] = new DNASequence_Creator();
 }
+
+
+
+

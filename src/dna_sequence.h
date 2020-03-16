@@ -14,11 +14,10 @@ public :
 };
 
 
-class DNASequence :public DNA{
+class DNASequence{
 public:
 
-
-    explicit DNASequence(const char *nucleotides);
+    explicit DNASequence(const char *nucleotides;
 
     explicit DNASequence(const std::string &nucleotides);
 

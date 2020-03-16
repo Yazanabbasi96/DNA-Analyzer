@@ -2,17 +2,14 @@
 #ifndef DNA_ANALYZER_DNA_SEQUENCE_INFO_H
 #define DNA_ANALYZER_DNA_SEQUENCE_INFO_H
 
-
-#include <string>
-#include "dna.h"
+#include "dna_sequence.h"
 
 
 class DNASequence_Info : public DNA {
 
-
 public:
 
-    DNASequence_Info(DNA *dna, std::string name);
+    DNASequence_Info(DNASequence *dna,std::string name);
 
      size_t getId() const {
         return m_id;
@@ -30,7 +27,6 @@ public:
         m_name = mName;
     }
 
-    DNA *m_dna;
 
 private:
     static size_t m_id;
