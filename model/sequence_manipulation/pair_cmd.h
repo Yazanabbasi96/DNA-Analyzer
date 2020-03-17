@@ -1,0 +1,10 @@
+#ifndef DNA_ANALYZER_PAIR_CMD_H
+#define DNA_ANALYZER_PAIR_CMD_H
+
+
+
+
+
+
+
+#endif //DNA_ANALYZER_PAIR_CMD_H
