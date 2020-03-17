@@ -24,6 +24,10 @@ public:
 
     void list_batches();
 
+    void batch_save(std::string name,Batch *batch);
+
+    void batch_load(std::string file_name,std::string name);
+
 
     ~Batch_command(){}
 

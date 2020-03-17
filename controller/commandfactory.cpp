@@ -18,8 +18,10 @@ void CommandFactory::CommandFactory_init() {
     commandFactory["save"] = new DNASequence_Creator();
     commandFactory["batch"] = new Batch_command();
     commandFactory["run"] = new Batch_command();
-    commandFactory["batchshow"] = new Batch_command();
     commandFactory["batchlist"] = new Batch_command();
+    commandFactory["batchshow"] = new Batch_command();
+    commandFactory["batchsave"] = new Batch_command();
+    commandFactory["batchload"] = new Batch_command();
 }
 
 
